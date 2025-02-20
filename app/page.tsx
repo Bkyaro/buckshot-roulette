@@ -1,101 +1,82 @@
-import Image from "next/image";
+import { Perks } from "@/components/Perks";
+
+import { PackageSearch, Settings, Eye } from "lucide-react";
+import Beer from "../assets/beer.jpg";
+import Phone from "../assets/phone.jpg";
+import Hacksaw from "../assets/hacksaw.jpg";
+import Adrenalin from "../assets/adrenalin.jpg";
+import Cigarette from "../assets/cigarette.jpg";
+import ExpiredMed from "../assets/expiredMed.jpg";
+import Handcuff from "../assets/handcuff.jpg";
+import Inverter from "../assets/inverter.jpg";
+import Magnifier from "../assets/magnifier.jpg";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+	const datas = [
+		{
+			id: 1,
+			image: Beer,
+			title: "啤酒",
+			content: "将当前的子弹退膛",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 2,
+			image: Phone,
+			title: "手机",
+			content: "预知随机位置的一发子弹虚实（根据当前弹夹计算）",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 3,
+			image: Hacksaw,
+			title: "短锯",
+			content: "下一发子弹造成2点伤害（如果是实弹）",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 4,
+			image: Adrenalin,
+			title: "肾上腺素",
+			content: "选择并偷走对方的一件物品并立即使用",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 5,
+			image: Cigarette,
+			title: "香烟",
+			content: "恢复一点血量",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 6,
+			image: ExpiredMed,
+			title: "过期药",
+			content: "50%的几率恢复2点血量，或者50%的几率失去1点血量",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 7,
+			image: Handcuff,
+			title: "手铐",
+			content: "强制让对手跳过一个行动回合",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 8,
+			image: Inverter,
+			title: "转换器",
+			content: "将当前的子弹虚实逆转",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 9,
+			image: Magnifier,
+			title: "放大镜",
+			content: "查看当前子弹虚实",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+	];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return <Perks data={datas} />;
 }
