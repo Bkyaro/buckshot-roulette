@@ -10,7 +10,7 @@ import ExpiredMed from "../assets/expiredMed.jpg";
 import Handcuff from "../assets/handcuff.jpg";
 import Inverter from "../assets/inverter.jpg";
 import Magnifier from "../assets/magnifier.jpg";
-
+import Mute from "../assets/mute.jpg";
 export default function Home() {
 	const datas = [
 		{
@@ -59,7 +59,7 @@ export default function Home() {
 			id: 7,
 			image: Handcuff,
 			title: "手铐",
-			content: "强制让对手跳过一个行动回合",
+			content: "指定一名对手跳过一个行动回合",
 			icon: <Settings className="size-6 text-primary" />,
 		},
 		{
@@ -74,6 +74,13 @@ export default function Home() {
 			image: Magnifier,
 			title: "放大镜",
 			content: "查看当前子弹虚实",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 10,
+			image: Mute,
+			title: "干扰器",
+			content: "指定一名对手跳过一个行动回合（同手铐）",
 			icon: <Settings className="size-6 text-primary" />,
 		},
 	];
