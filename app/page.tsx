@@ -10,7 +10,8 @@ import ExpiredMed from "../assets/expiredMed.jpg";
 import Handcuff from "../assets/handcuff.jpg";
 import Inverter from "../assets/inverter.jpg";
 import Magnifier from "../assets/magnifier.jpg";
-import Mute from "../assets/mute.jpg";
+import Mute from "../assets/mute.png";
+import Remote from "../assets/remote.png";
 export default function Home() {
 	const datas = [
 		{
@@ -81,6 +82,13 @@ export default function Home() {
 			image: Mute,
 			title: "干扰器",
 			content: "指定一名对手跳过一个行动回合（同手铐）",
+			icon: <Settings className="size-6 text-primary" />,
+		},
+		{
+			id: 11,
+			image: Remote,
+			title: "反相器",
+			content: "改变当前轮流方向（顺时针逆时针互换）",
 			icon: <Settings className="size-6 text-primary" />,
 		},
 	];
