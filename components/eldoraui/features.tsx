@@ -157,6 +157,7 @@ export function Features({
 	}, [collapseDelay, currentIndex, data.length]);
 
 	useEffect(() => {
+		console.log("data", data);
 		const carousel = carouselRef.current;
 		if (carousel) {
 			const handleScroll = () => {
@@ -177,7 +178,7 @@ export function Features({
 
 	return (
 		<section ref={ref} id="features">
-			<div className="container">
+			<div className="container max-w-full w-full">
 				<div className="mx-auto max-w-6xl h-full">
 					<div className="mx-auto my-12 grid h-full items-center gap-10 lg:grid-cols-2">
 						<div
@@ -279,16 +280,17 @@ export function Features({
 							</Accordion.Root>
 						</div>
 						<div
-							className={`h-full min-h-[200px] w-auto object-contain  ${
+							className={` w-auto object-contain max-h-min   ${
 								ltr && "lg:order-1"
 							}`}
 						>
 							{data[currentIndex]?.image ? (
 								<motion.img
 									key={currentIndex}
-									src={data[currentIndex].image}
+									// @ts-ignore
+									src={data[currentIndex].image.src}
 									alt="feature"
-									className="aspect-auto size-full rounded-xl border border-neutral-300/50 object-cover object-left-top p-1 shadow-lg"
+									className="object-contain aspect-auto size-full rounded-xl border border-neutral-300/50 object-left-top p-1 shadow-lg"
 									initial={{ opacity: 0, scale: 0.98 }}
 									animate={{ opacity: 1, scale: 1 }}
 									exit={{ opacity: 0, scale: 0.98 }}
