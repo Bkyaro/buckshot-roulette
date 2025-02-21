@@ -81,7 +81,7 @@ const datas = [
 		id: 11,
 		image: Remote,
 		title: "反相器",
-		content: "改变当前轮流方向（顺时针逆时针互换）",
+		content: "改变当前轮流方向（下家变上家）",
 		icon: <Settings className="size-6 text-primary" />,
 	},
 	{
